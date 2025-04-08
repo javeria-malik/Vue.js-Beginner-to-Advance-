@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <link rel="icon" href="data:,">
+  <title>Vue Test</title>
+</head>
+<body>
+<!---
+Here in this code the main thing is use of vue.js with the help of cdn for that purpose 
+in javascript tag there is putting the link of cdn 
+--after this there is making a button with method of @click after clicking the message will ve converted to another 
+message 
+#Fisrt code of vue.js
+-->
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <button @click="clickMe">Click Me</button>
+  </div>
+
+  <script>
+    const app = Vue.createApp({        
+      data() {
+        return {
+          message: 'Hello from Vue'
+        };
+      },
+      methods: {
+        clickMe() {
+          console.log('Button Clicked!');
+          this.message='Updated message';
+        }
+      }
+    });
+    app.mount('#app');
+  </script>
+
+</body>
+</html>
